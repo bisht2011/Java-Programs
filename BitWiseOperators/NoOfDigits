@@ -1,0 +1,14 @@
+public class NoOfDigits {
+    public static void main(String[] args) {
+        int n=6;
+        int base=2;
+//        int ans = (int)(Math.log(n) / Math.log(base)) + 1;
+int ans2=0;
+        while(n>0){
+            n = n >> 1;
+            ans2++;
+        }
+//        System.out.println(ans);
+        System.out.println(ans2);
+    }
+}
