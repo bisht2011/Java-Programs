@@ -1,0 +1,15 @@
+public class FindUnique {
+    public static void main(String[] args) {
+        int[] arr={2,4,6,2,5,4,1,6};
+        System.out.println(Unique(arr));
+    }
+
+   static int Unique(int[] arr) {
+        int unique=0;
+        for(int n:arr){
+            unique=unique^n;//associative and commutative hota hai..isme dono same element saath mai group ho jayene.
+        }
+        return unique;
+    }
+
+}
