@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class BitwiseOddEven {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("enter the number");
+        int n= scan.nextInt();
+        System.out.println(AndOperator(n));
+        System.out.println(OrOperator(n));
+        System.out.println(XOrOperator(n));
+
+    }
+
+    static String AndOperator(int n){
+        if((n&1)==0){
+            return "even";
+        }
+        return "odd";
+    }
+
+     static String OrOperator(int n) {
+        if( (n|1)>n){
+            return "even";
+        }
+        return "odd";
+    }
+    static String XOrOperator(int n) {
+     if(((n^1)==n-1))
+         return "odd";
+
+        return "even";
+    }
+}
