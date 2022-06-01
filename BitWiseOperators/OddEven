@@ -10,7 +10,7 @@ public class BitwiseOddEven {
         System.out.println(XOrOperator(n));
 
     }
-
+    
     static String AndOperator(int n){
         if((n&1)==0){
             return "even";
