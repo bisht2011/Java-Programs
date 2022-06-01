@@ -1,33 +1,27 @@
 import java.util.*;
 
-public class BitwiseOddEven {
+
+public class DuplicateNumber {
     public static void main(String[] args) {
-        Scanner scan=new Scanner(System.in);
-        System.out.println("enter the number");
-        int n= scan.nextInt();
-        System.out.println(AndOperator(n));
-        System.out.println(OrOperator(n));
-        System.out.println(XOrOperator(n));
-
-    }
-
-    static String AndOperator(int n){
-        if((n&1)==0){
-            return "even";
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int n = scan.nextInt();
+        int[] arr = new int[n];
+        System.out.println("enter the values");
+        for(int i=0;i<arr.length;i++){
+            arr[i]=scan.nextInt();
         }
-        return "odd";
+        System.out.println(Duplicate(arr));
     }
 
-     static String OrOperator(int n) {
-        if( (n|1)>n){
-            return "even";
-        }
-        return "odd";
-    }
-    static String XOrOperator(int n) {
-     if(((n^1)==n-1))
-         return "odd";
-
-        return "even";
+     static List<Integer> Duplicate(int[] arr) {
+         Arrays.sort(arr);
+         List<Integer>al=new ArrayList<>();
+         for(int i=0;i<arr.length-1;i++){
+             if((arr[i]^arr[i+1])==0){
+                 al.add(arr[i]);
+             }
+         }
+         return al;
     }
 }
