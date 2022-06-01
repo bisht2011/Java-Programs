@@ -1,0 +1,34 @@
+package com.company;
+
+public class pangram {
+    public static void main(String[] args) {
+        String str ="thequickbrownfoxjumpsoverthelazydog";
+        System.out.println(checkingpan(str));
+
+    }
+       static boolean checkingpan(String sentence){
+
+        if(sentence.length() < 26)
+
+            return false;
+
+        int count = 0;
+        for(char i = 'a' ; i <= 'z'; i++)
+        {
+            for(int j = 0 ; j < sentence.length(); j++)
+            {
+                if(sentence.charAt(j) == i)
+                {
+                    count++;
+                    break;
+                }
+
+            }
+        }
+        if(count == 26)
+            return true;
+
+        return false;
+
+    }
+    }
