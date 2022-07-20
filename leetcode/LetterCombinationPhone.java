@@ -32,7 +32,7 @@ public class LetterCombinationPhone {
             result.add(s);
             return;
         }
-        int digit=Character.getNumericValue(s1.charAt(0));
+        int digit=s1.charAt(0)-'0';
         for(int i=0;i<map.get(digit).length();i++){
             helper(s+map.get(digit).charAt(i),s1.substring(1),map,result);
         }
