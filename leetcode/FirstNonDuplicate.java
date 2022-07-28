@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class FirstNonDuplicate {
     public static void main(String[] args) {
-        String s ="abcabb";
+        String s ="abacbb";
         System.out.println(ans(s));
         System.out.println(ans2(s));
         System.out.println(ans3(s));
@@ -20,10 +20,11 @@ public class FirstNonDuplicate {
         HashMap<Character,Integer>map=new HashMap<>();
         for(int i=0;i<s.length();i++){
             if(map.containsKey(s.charAt(i))){
-                map.put(s.charAt(i),map.get(s.charAt(i))+1);
+                map.put(s.charAt(i),map.get(s.charAt(i))+1);//incrementing the value by 1 everytime it occurs
             }
             else{
-                map.put(s.charAt(i),1);
+                map.put(s.charAt(i),1);//we are adding 1 intially to every value of the character key which occur
+                //once
             }
         }
         for(int i=0;i<s.length();i++){
