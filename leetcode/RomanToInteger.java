@@ -14,6 +14,7 @@ public class RomanToInteger {
                 hm.put('D',500);
                 hm.put('M',1000);
                 int ans=hm.get(s.charAt(s.length()-1));//place the last digit
+               System.out.println(s.charAt(s.length()-1));
                 for(int i=s.length()-2;i>=0;i--){
                     if(hm.get(s.charAt(i))<hm.get(s.charAt(i+1)))//compare the last and second last digit if last
                         //digit is greater than second subtract it otherwise add it

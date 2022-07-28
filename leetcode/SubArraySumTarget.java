@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class SubArraySumTarget {
     public static void main(String[] args) {
-        int[] nums = {1,2,1,2,1};
+        int[] nums = {1,1,1,1,1};
         int k = 3;
         System.out.println(subarraySum(nums, k));
         System.out.println(subarraySumusinghashpmap(nums,k));

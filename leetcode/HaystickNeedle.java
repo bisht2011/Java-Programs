@@ -5,14 +5,12 @@ public class HaystickNeedle{
         System.out.println(strStr(s,n));
     }
     static int strStr(String haystack, String needle) {
-        int ans = 0;
-        if(!haystack.contains(needle)){
+
+        if (!haystack.contains(needle)) {
             return -1;
-        }
-        else {
-            ans = ans + haystack.indexOf(needle);
+        } else {
+            return haystack.indexOf(needle);//it will give the first occurence of the index
         }
 
-        return ans;
     }
 }

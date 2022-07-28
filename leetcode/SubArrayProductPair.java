@@ -28,6 +28,7 @@ public class SubArrayProductPair {
                 posa = arr[i];
             } else if (arr[i] > posb)
                 posb = arr[i];
+
             // Update minimum and second minimum
             // if needed
         }
