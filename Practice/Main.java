@@ -1,23 +1,26 @@
-package com.company.company;
+package com.company;
+class Box{
+    int l;
+    int b;
+    int w;
 
-import java.util.Scanner;
+    int vol(){
 
+        return l*b*w;
+    }
+    int vol(int l,int b, int w)
+    {
+        return l*b*w;
+    }
+}
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-       String c;
-        System.out.println("enter two numbers");
-        int a= scan.nextInt();
-        int b=scan.nextInt();
-
-        do{
-            int sum= a+ b;
-            System.out.println(sum);
-           System.out.println("do you wanna continue");
-              c=scan.next();
-
-        }while(c.equals("yes"));
-
+	Box box = new Box();
+    box.l=5;
+    box.b=5;
+    box.w=5;
+        System.out.println(box.vol(1,2,3));
+        System.out.println(box.vol());
     }
 }
